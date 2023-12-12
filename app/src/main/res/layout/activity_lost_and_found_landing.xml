@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary_color"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            app:tint="@color/ic_launcher_background"
+            tools:layout_conversion_absoluteHeight="34dp"
+            tools:layout_conversion_absoluteWidth="120dp" />
+
+        <TextView
+            android:id="@+id/tvHeaderSelectedItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost And Found Services"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="154dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/baseline_menu_24"
+            app:tint="@color/white"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="121dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_lnf_lostCard"
+                android:layout_width="354dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:clickable="true"
+                android:contentDescription="Lost Card Image"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="#E5EEFF"
+                app:strokeWidth="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_lnf_lostCardImage"
+                    android:layout_width="300dp"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    app:srcCompat="@drawable/pngwing" />
+
+                <TextView
+                    android:id="@+id/tv_lostCard_lost"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="220dp"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="LOST"
+                    android:textColor="#000000"
+                    android:textSize="45sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_lnf_lostCardImage" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv_lostCard_results"-->
+                <!--                    android:layout_width="200dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="75dp"-->
+                <!--                    android:layout_marginTop="300dp"-->
+                <!--                    android:layout_marginEnd="75dp"-->
+                <!--                    android:layout_marginBottom="10dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="# Results"-->
+                <!--                    android:textColor="#000000"-->
+                <!--                    android:textSize="20sp" />-->
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_lnf_foundCard"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                android:clickable="true"
+                android:contentDescription="Found Card Image"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_lnf_lostCard"
+                app:strokeColor="#E5EEFF"
+                app:strokeWidth="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_lnf_foundCardImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    app:srcCompat="@drawable/lnf_landing_lost" />
+
+                <TextView
+                    android:id="@+id/tv_foundCard_found"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="220dp"
+                    android:layout_marginEnd="110dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Found"
+                    android:textColor="#000000"
+                    android:textSize="45sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_lnf_foundCardImage" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv_foundCard_results"-->
+                <!--                    android:layout_width="200dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="75dp"-->
+                <!--                    android:layout_marginTop="300dp"-->
+                <!--                    android:layout_marginEnd="75dp"-->
+                <!--                    android:layout_marginBottom="10dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="# Results"-->
+                <!--                    android:textColor="#000000"-->
+                <!--                    android:textSize="20sp" />-->
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

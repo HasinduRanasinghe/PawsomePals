@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_lostItem"
+        app:cardCornerRadius="25dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#E5EEFF"
+        android:contentDescription="Lost Pet Card"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E5EEFF"
+        app:strokeWidth="10dp">
+
+        <ImageView
+            android:id="@+id/iv_lostPage"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_lostPageRIPetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="265dp"
+            android:text="Name"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_lostPage" />
+
+        <TextView
+            android:id="@+id/tv_lostPageRIPetMF"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="285dp"
+            android:text="Male"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lostPageRIPetName" />
+
+        <TextView
+            android:id="@+id/tv_lostPageRIPetBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="285dp"
+            android:text="Type"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lostPageRIPetName" />
+
+        <TextView
+            android:id="@+id/tv_lostPageRIPetLSLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="305dp"
+            android:textColor="@color/black"
+            android:text="Last Seen Location"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lostPageRIPetMF" />
+
+        <ImageView
+            android:id="@+id/iv_lostDetailsCardPet"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="285dp"
+            android:layout_marginTop="270dp"
+            android:src="@drawable/dog_icon"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
